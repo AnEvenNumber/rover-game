@@ -1,3 +1,12 @@
+
+
+var roverImage = document.createElement("img");
+roverImage.src = '/images/space-rover-icon.png';
+console.log(roverImage);
+
+//let rImage = `<img src="äfdsadfsadf" id="legal">nice</img>`
+
+
 class Rover{
     constructor(name, direction,x,y) {
         this.name = name;
