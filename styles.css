@@ -8,7 +8,10 @@
     background-image: url('images/155064.jpg');
 }
 
-
+.rover-image{
+  height: 50px;
+  width: 50px;
+}
 .column{
     height:50px;
     width:10%;
