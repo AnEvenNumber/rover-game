@@ -167,7 +167,7 @@ turnLeft(){
           console.log(`Invalid command:${command}, you must enter valid commands: l(left),r(right),f(forward),b(backward)`);
       }
     }
-    this.moveRover()
+    this.moveRover();
   console.log(this.travelLog);
   }
   /*lastPositionx(){
@@ -233,16 +233,12 @@ turnLeft(){
 */
 
 
-document.querySelector("body > header > h3:nth-child(3) > button").onclick = function(){
-  let commands = document.querySelector("body > header > h3:nth-child(3) > input[type=text]").value
+document.querySelector("body > header > h3 > button").onclick = function(){
+  let commands = document.querySelector("body > header > h3 > input[type=text]").value
   console.log(commands)
   rover.commands(commands)   
 }
 
-document.querySelector("body > header > h3:nth-child(2) > button").onclick = function() {
-  let name = document.querySelector("body > header > h3:nth-child(2) > input[type=text]").value
-  console.log('name is ',name)
-}
 
 
 let rover = new Rover("Daphne","S",0,0);
