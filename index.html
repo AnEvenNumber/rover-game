@@ -8,13 +8,11 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <script src="script.js"></script>
 </head>
 <body>
 
 <header>
     <h1>Mars Rover</h1>
-    <h3><label for='name'>Name: </label><input type='text' placeholder=" type name here"><button class='enter-btn'>Go</button></h3>
    <h3><label for='commands'>Commands: </label><input type='text' placeholder=" l,r,f,b"><button class= 'enter-btn'>Go</button></h3>
     
 </header>
@@ -22,7 +20,7 @@
     <div class="whole-page">
         <div class="container-fluid">
             <div class="row">
-              <div class="column"><img src="images/space-rover-icon.png" alt="Rover" class="rover-image"></div>
+              <div class="column"><img id="rover" src="images/space-rover-icon.png" alt="Rover" class="rover-image"></div>
               <div class="column"></div>
               <div class="column"></div>
                 <div class="column"></div>
@@ -156,4 +154,6 @@
           </div>
     </div>  
 </body>
+<script src="rover.js"></script>
+
 </html>

@@ -1,4 +1,4 @@
-window.onload = function(){
+//window.onload = function(){
 
 //var roverImage = document.createElement("img");
 //roverImage.src = '/images/space-rover-icon.png';
@@ -96,6 +96,13 @@ turnLeft(){
       }
   }
 
+  moveRover(){
+    let x = this.x;
+    let y = this.y;
+    document.querySelector('#rover').remove() //delete rover & add a new one.
+    document.querySelectorAll('.row')[y].children[x].innerHTML = '<img id="rover" src="images/space-rover-icon.png" alt="Rover" class="rover-image">'
+  }
+
   moveBackward(){
   console.log("moveBackward was called")
   
@@ -160,6 +167,7 @@ turnLeft(){
           console.log(`Invalid command:${command}, you must enter valid commands: l(left),r(right),f(forward),b(backward)`);
       }
     }
+    this.moveRover()
   console.log(this.travelLog);
   }
   /*lastPositionx(){
@@ -225,45 +233,64 @@ turnLeft(){
 */
 
 
+document.querySelector("body > header > h3:nth-child(3) > button").onclick = function(){
+  let commands = document.querySelector("body > header > h3:nth-child(3) > input[type=text]").value
+  console.log(commands)
+  rover.commands(commands)   
+}
+
+document.querySelector("body > header > h3:nth-child(2) > button").onclick = function() {
+  let name = document.querySelector("body > header > h3:nth-child(2) > input[type=text]").value
+  console.log('name is ',name)
+}
+
+
+let rover = new Rover("Daphne","S",0,0);
+rover.commands("ffffffff");
+
+setInterval(() => {
+  rover.commands('f')
+},500)
+
 //Console log Tests:
 
 
-  let board = [ 
-    [' ','O',' ',' ',' ','O',' ',' ',' ',' '],
-    [' ',' ',' ',' ',' ',' ',' ',' ',' ',' '],
-    [' ',' ',' ',' ',' ',' ',' ',' ',' ',' '],
-    [' ',' ',' ',' ',' ',' ',' ',' ',' ',' '],
-    [' ',' ',' ','O',' ',' ',' ',' ',' ',' '],
-    [' ',' ',' ',' ',' ',' ',' ',' ',' ',' '],
-    [' ',' ',' ',' ',' ',' ',' ',' ',' ',' '],
-    [' ',' ',' ',' ',' ',' ',' ',' ',' ',' '],
-    [' ',' ',' ',' ',' ',' ',' ',' ',' ',' '],
-    [' ',' ',' ',' ',' ',' ',' ',' ',' ',' '],
+//   let board = [ 
+//     [' ','O',' ',' ',' ','O',' ',' ',' ',' '],
+//     [' ',' ',' ',' ',' ',' ',' ',' ',' ',' '],
+//     [' ',' ',' ',' ',' ',' ',' ',' ',' ',' '],
+//     [' ',' ',' ',' ',' ',' ',' ',' ',' ',' '],
+//     [' ',' ',' ','O',' ',' ',' ',' ',' ',' '],
+//     [' ',' ',' ',' ',' ',' ',' ',' ',' ',' '],
+//     [' ',' ',' ',' ',' ',' ',' ',' ',' ',' '],
+//     [' ',' ',' ',' ',' ',' ',' ',' ',' ',' '],
+//     [' ',' ',' ',' ',' ',' ',' ',' ',' ',' '],
+//     [' ',' ',' ',' ',' ',' ',' ',' ',' ',' '],
    
-     ];
+//      ];
 
 
-let daphRover = new Rover("Daphne","S",0,0);
+// let daphRover = new Rover("Daphne","S",0,0);
 
-daphRover.commands("ffffffff")
+// daphRover.commands("ffffffff")
 
-daphRover.addToBoard(board)
+// daphRover.addToBoard(board)
 
-console.log(board);
+// console.log(board);
 
 
   
-    const theRover = document.createElement('div');
-    theRover.id = 'rover';
+    // const theRover = document.createElement('div');
+    // theRover.id = 'rover';
 
-    let row1 = daphRover.x;
+    // let row1 = daphRover.x;
 
-        let column1 = daphRover.y;
-
-
-            document.querySelector(`.row${randomRow} > .col${randomColumn}`)
-            .appendChild(theMole)
+    //     let column1 = daphRover.y;
 
 
+    //         document.querySelector(`.row${randomRow} > .col${randomColumn}`)
+    //         .appendChild(theMole)
 
-    }
+
+
+   // }
