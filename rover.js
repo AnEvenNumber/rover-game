@@ -250,4 +250,5 @@ daphRover.commands("ffffffff")
 
 daphRover.addToBoard(board)
 
-console.log(board)
+console.log(board);
+
