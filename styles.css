@@ -5,18 +5,33 @@
     justify-content: center;
     align-items: center;
     margin-top: 20px;
-    background-image: url('images/155064.jpg');
+    border: 40px solid transparent;
+    
 }
 
+header h1{
+    text-align: center;
+    color: saddlebrown;
+    
+}
 
+header h3{
+    text-align: center;
+    
+}
+
+.container-fluid{
+    background-image: url('images/155064.jpg');
+    
+}
 .column{
     height:50px;
     width:10%;
-    border:1px solid black;
+    border:3px solid black;
   }
   .container-fluid{
   
-    border: 40px solid transparent;
+
     text-align:center;
     margin:auto;
   }
