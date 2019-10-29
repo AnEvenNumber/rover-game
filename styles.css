@@ -4,31 +4,25 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 20px;
 }
 
 
-.game-board{
-    width: 60%;
-    height: 60vh;
-    border: 1px solid black;
-    border-radius: 2px;
-}
-
-.row{
-    width: 100%;
-    height: 33%;
-    display: flex;
-}
-
-.col{
-    border: 1px dotted red;
-    height: 100%;
-    width: 33%;
-    display: flex;
+.column{
+    height:50px;
+    width:10%;
+    border:1px solid black;
+  }
+  .container-fluid{
+  
+    border: 40px solid transparent;
+    text-align:center;
+    margin:auto;
+  }
+  .row{
+    flex-wrap:nowrap;
     justify-content: center;
-    align-items: center;
-}
-
+  }
 
 
 #mole{
@@ -39,9 +33,8 @@
 }
 
 #explode{
-    width: 50px;
     height: 50px;
-    background-image: url('./explosion.gif');
+    width: 50px;
+    background-image: url('./Xy8CttI.gif');
     background-size: contain;
-
 }
