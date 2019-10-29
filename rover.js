@@ -1,4 +1,4 @@
-
+window.onload = function(){
 
 //var roverImage = document.createElement("img");
 //roverImage.src = '/images/space-rover-icon.png';
@@ -252,7 +252,18 @@ daphRover.addToBoard(board)
 console.log(board);
 
 
+  
+    const theRover = document.createElement('div');
+    theRover.id = 'rover';
+
+    let row1 = daphRover.x;
+
+        let column1 = daphRover.y;
+
+
+            document.querySelector(`.row${randomRow} > .col${randomColumn}`)
+            .appendChild(theMole)
 
 
 
-
+    }
