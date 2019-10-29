@@ -1,8 +1,7 @@
 
 
-var roverImage = document.createElement("img");
-roverImage.src = '/images/space-rover-icon.png';
-console.log(roverImage);
+//var roverImage = document.createElement("img");
+//roverImage.src = '/images/space-rover-icon.png';
 
 //let rImage = `<img src="äfdsadfsadf" id="legal">nice</img>`
 
